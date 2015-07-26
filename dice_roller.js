@@ -1,6 +1,6 @@
 var DiceRoller = function (dstr) {
 	this.init = function (str) {
-		var dRexp = /(\d*)?d(?:(\d+|F))(?:([\+-]\d*))?/,
+		var dRexp = /(\d*)?d(\d+|F)([\+\-]\d*)?/,
 			parts = (str || '3d6').match(dRexp), // initialized as 3d6 by default
 			count = +parts[1],
 			mod = +parts[3] || 0,
